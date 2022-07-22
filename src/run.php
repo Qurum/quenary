@@ -13,6 +13,3 @@ $container = require 'container.php';
 
 $controller = $container->get(Controller::class);
 $controller->doAction();
-//($dispatcher->dispatch(ArticleEventTypes::Command->value, '{"value": "Hey-ho!"}'));
-//($dispatcher->dispatch(ArticleEventTypes::Query->value, '{"payload": "Hey-ho-ho!"}'));
-//($dispatcher->dispatch(ArticleEventTypes::Event->value, '{"payload": "Hey-ho-ho-hey!"}'));

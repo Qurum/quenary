@@ -14,7 +14,7 @@ class ArticleServiceImplementation implements ArticleService
     public function __construct(private readonly Dispatcher $dispatcher) {}
 
     #[CommandHandler(ArticleEventTypes::Command)]
-    public function commandHandler(PublishAnArticleCommand $article)
+    public function publishArticle(PublishAnArticleCommand $article)
     {
         echo "Получена команда на публикацию статьи", PHP_EOL;
         echo "Автор: ", $article->author, PHP_EOL;

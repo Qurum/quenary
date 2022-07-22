@@ -10,5 +10,5 @@ use Qenary\Attributes\Handler\CommandHandler;
 interface ArticleService
 {
     #[CommandHandler(ArticleEventTypes::Command)]
-    public function commandHandler(PublishAnArticleCommand $article);
+    public function publishArticle(PublishAnArticleCommand $article);
 }
