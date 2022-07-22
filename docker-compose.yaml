@@ -1,0 +1,35 @@
+version: "3.9"
+
+services:
+  quenary-install:
+    build: php
+    working_dir: /app
+    command: composer install
+    volumes:
+      - ./src:/app
+    profiles:
+      - donotstart
+    env_file:
+      .env
+
+  quenary-build:
+    build: php
+    working_dir: /app
+    command: sh /app/build.sh
+    volumes:
+      - ./src:/app
+    profiles:
+      - donotstart
+    env_file:
+      .env
+
+  quenary-run:
+    build: php
+    working_dir: /app
+    command: php /app/run.php
+    volumes:
+      - ./src:/app
+    profiles:
+      - donotstart
+    env_file:
+      .env
