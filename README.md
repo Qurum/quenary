@@ -35,7 +35,7 @@ enum ArticleEventTypes: string implements EventTypesInterface
     case Event = 'huldufolk.event';
 }
 ```
-Наследоваться от EventTypesInterface обязательно, требования реализации.
+Наследоваться от EventTypesInterface обязательно, требование реализации.
 Типов может быть много, не обязательно эти три.
 
 * Дальше в коде можно выставлять на шину messages. Например, 
