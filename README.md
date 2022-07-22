@@ -130,6 +130,8 @@ event:
       event: App\Domain\Services\NewArticleEvent
 ```
 
+Для перебора всех классов проекта используется ```composer dump-autoload```, так что без composer'а работать не будет.
+
 ## Как потрогать
 - ```docker-compose up quenary-install``` скачает и установит контейнер и другие пакеты. 
 Достаточно вызвать один раз.
