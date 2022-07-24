@@ -7,7 +7,8 @@ namespace Qenary\Core;
 abstract class Autoloader
 {
     public function __construct(
-        private readonly ConfigManager $configManager,
+        protected readonly ConfigManager $configManager,
+        protected readonly HandlerManager $handlerManager
     ) {}
 
     public function dump(): void

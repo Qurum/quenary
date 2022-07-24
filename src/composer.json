@@ -23,8 +23,7 @@
   },
   "scripts": {
     "test": [
-      "composer dump-autoload --optimize --dev",
-      "phpunit"
+      "phpunit --filter Autoloader"
     ]
   }
 }

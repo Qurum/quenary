@@ -27,6 +27,5 @@ return [
     HandlerFactory::class => DI\autowire(HandlerFactoryImplementation::class),
     Hydrator::class       => DI\autowire(HydratorImplementation::class),
     Dispatcher::class     => DI\autowire(DispatcherImplementation::class),
-    Autoloader::class     => DI\autowire(AutoloaderImplementation::class)
-        ->method('injectHandlerManager', DI\get(HandlerManager::class)),
+    Autoloader::class     => DI\autowire(AutoloaderImplementation::class),
 ];

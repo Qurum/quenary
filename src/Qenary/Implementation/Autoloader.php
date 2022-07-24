@@ -10,13 +10,6 @@ use Qenary\Core\MessageHandlerDTO;
 
 class Autoloader extends AbstractAutoloader
 {
-    protected readonly HandlerManager $handlerManager;
-
-    public function injectHandlerManager(HandlerManager $handlerManager)
-    {
-        $this->handlerManager = $handlerManager;
-    }
-
     protected function queries(): array
     {
         $result = [];
