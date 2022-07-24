@@ -6,6 +6,7 @@ namespace Qenary\Implementation\HandlerFactory;
 
 use Qenary\Attributes\Handler\CommandHandler;
 use Qenary\Core\HandlerFactory as HandlerFactoryInterface;
+use Qenary\Core\HandlerFactory\Exceptions\CommandNotSetException;
 use Qenary\Core\MessageHandlerDTO;
 use ReflectionAttribute;
 use ReflectionClass;
@@ -38,6 +39,11 @@ class HandlerFactory implements HandlerFactoryInterface
     {
         /** @var CommandHandler $handler */
         $handler = $attribute->newInstance();
+
+        if(empty($method->getParameters()))
+        {
+            throw new CommandNotSetException();
+        }
 
         return new MessageHandlerDTO (
             type   : $handler->type()->value,

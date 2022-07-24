@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Qenary\Core;
 
 use Psr\Container\ContainerInterface;
+use Qenary\Core\Hydrator\Hydrator;
 
 abstract class Dispatcher
 {

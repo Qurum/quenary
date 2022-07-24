@@ -6,7 +6,7 @@ use Qenary\Core\ConfigManager;
 use Qenary\Core\Dispatcher;
 use Qenary\Core\HandlerFactory;
 use Qenary\Core\HandlerManager;
-use Qenary\Core\Hydrator;
+use Qenary\Core\Hydrator\Hydrator;
 use Qenary\Implementation\Autoloader as AutoloaderImplementation;
 use Qenary\Implementation\ClassManager\ClassManager as ClassManagerImplementation;
 use Qenary\Implementation\ConfigManager as ConfigManagerImplementation;
@@ -21,7 +21,7 @@ use Qenary\Implementation\ProxyHandlerManager;
 return [
     Paths::class          => DI\autowire(DefaultPaths::class),
     ClassManager::class   => DI\autowire(ClassManagerImplementation::class)
-        ->method('injectNamespace', DI\env('QENARY_NAMESPACE')),
+        ->constructorParameter('namespace', DI\env('QENARY_NAMESPACE')),
     ConfigManager::class  => DI\autowire(ConfigManagerImplementation::class),
     HandlerManager::class => DI\autowire(ProxyHandlerManager::class),
     HandlerFactory::class => DI\autowire(HandlerFactoryImplementation::class),

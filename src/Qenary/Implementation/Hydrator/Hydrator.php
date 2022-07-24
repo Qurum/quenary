@@ -4,8 +4,14 @@ declare(strict_types=1);
 
 namespace Qenary\Implementation\Hydrator;
 
-use Qenary\Core\Hydrator as HydratorInterface;
-use Qenary\Implementation\Hydrator\Exceptions\HydratorException;
+use JsonException;
+use Qenary\Core\Hydrator\Hydrator as HydratorInterface;
+use Qenary\Core\Hydrator\Exceptions\CannotInstantiate;
+use Qenary\Core\Hydrator\Exceptions\ClassDoesNotExist;
+use Qenary\Core\Hydrator\Exceptions\NoProperty;
+use Qenary\Core\Hydrator\Exceptions\NotAllowNull;
+use Qenary\Core\Hydrator\Exceptions\WrongJson;
+use Qenary\Core\Hydrator\Exceptions\WrongType;
 use ReflectionClass;
 use ReflectionException;
 use ReflectionProperty;
@@ -15,41 +21,63 @@ class Hydrator implements HydratorInterface
     public function hydrate(string $className, string $jsonString): object
     {
         try {
-            $reflection_class = new ReflectionClass($className);
+            $reflectionClass = new ReflectionClass($className);
         } catch (ReflectionException) {
-            throw new HydratorException(sprintf(ErrorMessages::ClassDoesNotExist->value, $className));
+            throw new ClassDoesNotExist(sprintf(ErrorMessages::ClassDoesNotExist->value, $className));
         }
 
         try {
-            $instance = $reflection_class->newInstanceWithoutConstructor();
+            $instance = $reflectionClass->newInstanceWithoutConstructor();
         } catch (ReflectionException) {
-            throw new HydratorException(sprintf(ErrorMessages::CannotInstantiate->value, $command_name));
+            throw new CannotInstantiate(sprintf(ErrorMessages::CannotInstantiate->value, $command_name));
         }
 
-        $json = json_decode($jsonString);
+        try {
+            $json = json_decode($jsonString, flags: JSON_THROW_ON_ERROR);
+        } catch (JsonException) {
+            throw new WrongJson(ErrorMessages::WrongJson->value);
+        }
 
-        foreach ($reflection_class->getProperties(ReflectionProperty::IS_PUBLIC) as $property) {
-            $property_name = $property->getName();
 
-            if (!property_exists($json, $property_name)) {
-                throw new HydratorException(
-                    sprintf(ErrorMessages::Hydration_NoProperty->value, '$JSON', $property_name)
+        foreach ($reflectionClass->getProperties(ReflectionProperty::IS_PUBLIC) as $property) {
+            $propertyName = $property->getName();
+
+            if (!property_exists($json, $propertyName)) {
+                throw new NoProperty(
+                    sprintf(ErrorMessages::Hydration_NoProperty->value, '$JSON', $propertyName)
                 );
             }
 
-            if (gettype($json->{$property_name}) !== $property->getType()->getName()) {
-                throw new HydratorException(
-                    sprintf(
-                        ErrorMessages::Hydration_WrongType->value,
-                        '$JSON->' . $property_name,
-                        gettype($json->{$property_name}),
-                        '$instance->' . $property_name,
-                        $property->getType()->getName()
-                    )
-                );
+            switch (get_debug_type($json->{$propertyName})) {
+
+                case 'null':
+                    if (!$property->getType()->allowsNull()) {
+                        throw new NotAllowNull(
+                            sprintf(
+                                ErrorMessages::Hydration_NotAllowNull->value,
+                                '$instance->' . $propertyName,
+                                $property->getType()->getName()
+                            )
+                        );
+                    };
+                    break;
+
+                default:
+                    if (get_debug_type($json->{$propertyName}) !== $property->getType()->getName()) {
+                        throw new WrongType(
+                            sprintf(
+                                ErrorMessages::Hydration_WrongType->value,
+                                '$JSON->' . $propertyName,
+                                get_debug_type($json->{$propertyName}),
+                                '$instance->' . $propertyName,
+                                $property->getType()->getName()
+                            )
+                        );
+                    }
+                    break;
             }
 
-            $property->setValue($instance, $json->{$property_name});
+            $property->setValue($instance, $json->{$propertyName});
         }
 
         return $instance;
