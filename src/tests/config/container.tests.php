@@ -3,8 +3,10 @@
 declare(strict_types=1);
 
 use Qenary\Core\ClassManager;
+use Qenary\Core\HandlerFactory;
 use Qenary\Core\Hydrator\Hydrator;
 use Qenary\Implementation\ClassManager\ClassManager as ClassManagerImplementation;
+use Qenary\Implementation\HandlerFactory\HandlerFactory as HandlerFactoryImplementation;
 use Qenary\Implementation\Hydrator\Hydrator as HydratorImplementation;
 use Qenary\Tests\ClassManager\ComposerMock;
 
@@ -13,4 +15,5 @@ return [
     ClassManager::class => DI\autowire(ClassManagerImplementation::class)
         ->constructorParameter('composer', DI\autowire(ComposerMock::class))
         ->constructorParameter('namespace', 'Qenary'),
+    HandlerFactory::class => DI\autowire(HandlerFactoryImplementation::class),
 ];
