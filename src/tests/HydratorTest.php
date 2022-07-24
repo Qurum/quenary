@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace Quenary\Tests;
+
 use PHPUnit\Framework\TestCase;
 use Qenary\Core\Hydrator\Exceptions\ClassDoesNotExist;
 use Qenary\Core\Hydrator\Exceptions\NoProperty;

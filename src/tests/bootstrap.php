@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-$container = require 'container.php';
+$container = require 'tests/container.php';
 
 function container(?string $className)
 {

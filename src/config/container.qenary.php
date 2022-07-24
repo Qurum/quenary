@@ -21,7 +21,7 @@ use Qenary\Implementation\ProxyHandlerManager;
 return [
     Paths::class          => DI\autowire(DefaultPaths::class),
     ClassManager::class   => DI\autowire(ClassManagerImplementation::class)
-        ->method('injectNamespace', DI\env('QENARY_NAMESPACE')),
+        ->constructorParameter('namespace', DI\env('QENARY_NAMESPACE')),
     ConfigManager::class  => DI\autowire(ConfigManagerImplementation::class),
     HandlerManager::class => DI\autowire(ProxyHandlerManager::class),
     HandlerFactory::class => DI\autowire(HandlerFactoryImplementation::class),

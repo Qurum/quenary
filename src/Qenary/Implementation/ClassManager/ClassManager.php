@@ -6,24 +6,25 @@ namespace Qenary\Implementation\ClassManager;
 
 use Generator;
 use Monolog\Logger;
+use Qenary\Core\ClassManager as ClassManagerInterface;
 use ReflectionClass;
 
-class ClassManager implements \Qenary\Core\ClassManager
+class ClassManager implements ClassManagerInterface
 {
-    private readonly string $namespace;
-
-    public function __construct(private readonly Logger $logger) {}
+    public function __construct(
+        private readonly Logger $logger,
+        private readonly Composer $composer,
+        private readonly string $namespace
+    ) {}
 
     public function interfaces(): Generator
     {
         $this->logger->info(Messages::GENERATION_STARTED->value);
-        exec(Composer::COMMAND->value);
+        $this->composer->execute();
         $this->logger->info(Messages::GENERATION_COMPLETED->value);
 
-        $classes = require(Composer::PATH_TO_CLASSMAP->value);
-        $classes = array_keys($classes);
         $classes = array_filter(
-            $classes,
+            $this->composer->classes(),
             fn($className) => str_starts_with($className, $this->namespace)
         );
 
@@ -36,10 +37,5 @@ class ClassManager implements \Qenary\Core\ClassManager
 
             yield $class;
         }
-    }
-
-    public function injectNamespace(string $namespace)
-    {
-        $this->namespace = $namespace;
     }
 }

@@ -22,6 +22,9 @@
     "ext-mbstring": "*"
   },
   "scripts": {
-    "test": "phpunit"
+    "test": [
+      "composer dump-autoload --optimize --dev",
+      "phpunit"
+    ]
   }
 }
