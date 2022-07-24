@@ -2,4 +2,9 @@
 
 declare(strict_types=1);
 
-return [];
+use Qenary\Core\Hydrator\Hydrator;
+use Qenary\Implementation\Hydrator\Hydrator as HydratorImplementation;
+
+return [
+    Hydrator::class => DI\autowire(HydratorImplementation::class),
+];
