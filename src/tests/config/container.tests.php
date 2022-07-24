@@ -3,10 +3,12 @@
 declare(strict_types=1);
 
 use Qenary\Implementation\ClassManager\ClassManager as ClassManagerImplementation;
+use Qenary\Implementation\Dispatcher as DispatcherImplementation;
 use Qenary\Implementation\HandlerFactory\HandlerFactory as HandlerFactoryImplementation;
 use Qenary\Implementation\Hydrator\Hydrator as HydratorImplementation;
 use Qenary\Implementation\ProxyHandlerManager;
 use Qenary\Tests\ClassManager\ComposerMock;
+use Qenary\Tests\Dispatcher\AutoloaderStub;
 use Qenary\Tests\HandlerManager\ClassManagerStub;
 
 return [
@@ -17,4 +19,6 @@ return [
     'Tests_HandlerFactory' => DI\autowire(HandlerFactoryImplementation::class),
     'Tests_HandlerManager' => DI\autowire(ProxyHandlerManager::class)
         ->constructorParameter('classManager', DI\autowire(ClassManagerStub::class)),
+    'Tests_Dispatcher' => DI\autowire(DispatcherImplementation::class)
+        ->constructorParameter('autoloader', DI\autowire(AutoloaderStub::class)),
 ];
