@@ -6,6 +6,7 @@ use DI\ContainerBuilder;
 
 $builder = new ContainerBuilder();
 $builder->addDefinitions(require('config/container.general.php'));
+$builder->addDefinitions(require('config/container.quenary.php'));
 $builder->addDefinitions(require('config/container.tests.php'));
 
 return $builder->build();

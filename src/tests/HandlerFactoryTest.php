@@ -23,12 +23,12 @@ class HandlerFactoryTest extends TestCase
 
     public function setUp(): void
     {
-        $this->handlerFactory = container(HandlerFactory::class);
+        $this->handlerFactory = container('Tests_HandlerFactory');
     }
 
     public function testCreateHandlersFor()
     {
-        self::assertEquals(
+        self::assertEqualsCanonicalizing(
             [
                 new MessageHandlerDTO(
                     type   : EventTypes::BLUE_EVENT->value,
@@ -49,7 +49,7 @@ class HandlerFactoryTest extends TestCase
             )
         );
 
-        self::assertEquals(
+        self::assertEqualsCanonicalizing(
             [
                 new MessageHandlerDTO(
                     type   : EventTypes::BAR_COMMAND->value,
@@ -76,7 +76,7 @@ class HandlerFactoryTest extends TestCase
             )
         );
 
-        self::assertEquals(
+        self::assertEqualsCanonicalizing(
             [
                 new MessageHandlerDTO(
                     type   : EventTypes::GREEN_QUERY->value,

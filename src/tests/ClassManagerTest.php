@@ -13,7 +13,7 @@ class ClassManagerTest extends TestCase
 {
     public function testInterfaces()
     {
-        $classManager = container(ClassManager::class);
+        $classManager = container('Tests_ClassManager');
         $composerMock = container(ComposerMock::class);
 
         $interfaces = [];
@@ -23,6 +23,6 @@ class ClassManagerTest extends TestCase
             $interfaces[] = $interface->getName();
         }
 
-        self::assertEquals($composerMock->interfaces(), $interfaces);
+        self::assertEqualsCanonicalizing($composerMock->interfaces(), $interfaces);
     }
 }

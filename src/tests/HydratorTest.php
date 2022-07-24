@@ -22,10 +22,9 @@ class HydratorTest extends TestCase
         self::$dataObjectFactory = new DataObjectFactory();
     }
 
-
     public function setUp(): void
     {
-        $this->hydrator = container(Hydrator::class);
+        $this->hydrator = container('Tests_Hydrator');
     }
 
     public function testHydrate()
