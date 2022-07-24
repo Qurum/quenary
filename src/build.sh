@@ -2,4 +2,4 @@
 
 composer dump-autoload --optimize --no-dev
 mkdir -p /app/tmp
-php /app/build.php
+php /app/src/build.php

@@ -6,7 +6,7 @@ services:
     working_dir: /app
     command: composer install
     volumes:
-      - ./src:/app
+      - .:/app
     profiles:
       - donotstart
     env_file:
@@ -15,9 +15,9 @@ services:
   quenary-build:
     build: php
     working_dir: /app
-    command: sh /app/build.sh
+    command: sh /app/src/build.sh
     volumes:
-      - ./src:/app
+      - .:/app
     profiles:
       - donotstart
     env_file:
@@ -26,9 +26,9 @@ services:
   quenary-run:
     build: php
     working_dir: /app
-    command: php /app/run.php
+    command: php /app/src/run.php
     volumes:
-      - ./src:/app
+      - .:/app
     profiles:
       - donotstart
     env_file:
@@ -41,7 +41,7 @@ services:
     working_dir: /app
     command: sh -c "composer install && composer test"
     volumes:
-      - ./src:/app
+      - .:/app
     profiles:
       - donotstart
     env_file:
