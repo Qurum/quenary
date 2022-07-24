@@ -6,7 +6,7 @@ use Qenary\Core\ConfigManager;
 use Qenary\Core\Dispatcher;
 use Qenary\Core\HandlerFactory;
 use Qenary\Core\HandlerManager;
-use Qenary\Core\Hydrator;
+use Qenary\Core\Hydrator\Hydrator;
 use Qenary\Implementation\Autoloader as AutoloaderImplementation;
 use Qenary\Implementation\ClassManager\ClassManager as ClassManagerImplementation;
 use Qenary\Implementation\ConfigManager as ConfigManagerImplementation;
