@@ -6,7 +6,7 @@ namespace Quenary\Implementation\ClassManager;
 
 class Composer
 {
-    private const COMMAND          = 'composer dump-autoload --optimize --no-dev';
+    private const COMMAND = 'composer dump-autoload --optimize --no-dev';
 
     public function execute()
     {
@@ -15,6 +15,6 @@ class Composer
 
     public function classes()
     {
-        return array_keys(require(getenv('QENARY_PATH_TO_CLASSMAP')));
+        return array_keys(require(getenv('QUENARY_PATH_TO_CLASSMAP')));
     }
 }
