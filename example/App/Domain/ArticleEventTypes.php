@@ -2,7 +2,7 @@
 
 namespace App\Domain;
 
-use Qenary\Attributes\EventType as EventTypesInterface;
+use Quenary\Attributes\EventType as EventTypesInterface;
 
 enum ArticleEventTypes: string implements EventTypesInterface
 {

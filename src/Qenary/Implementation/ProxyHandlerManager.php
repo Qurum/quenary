@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Qenary\Implementation;
+namespace Quenary\Implementation;
 
-use Qenary\Attributes\Handler\CommandHandler;
-use Qenary\Attributes\Handler\EventHandler;
-use Qenary\Attributes\Handler\QueryHandler;
-use Qenary\Core\ClassManager;
-use Qenary\Core\HandlerFactory;
-use Qenary\Core\HandlerManager;
+use Quenary\Attributes\Handler\CommandHandler;
+use Quenary\Attributes\Handler\EventHandler;
+use Quenary\Attributes\Handler\QueryHandler;
+use Quenary\Core\ClassManager;
+use Quenary\Core\HandlerFactory;
+use Quenary\Core\HandlerManager;
 
 class ProxyHandlerManager implements HandlerManager
 {

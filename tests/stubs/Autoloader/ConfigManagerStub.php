@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Qenary\Tests\Autoloader;
+namespace Quenary\Tests\Autoloader;
 
-use Qenary\Core\ConfigManager;
+use Quenary\Core\ConfigManager;
 
 class ConfigManagerStub implements ConfigManager
 {

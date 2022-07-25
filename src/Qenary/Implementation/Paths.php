@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Qenary\Implementation;
+namespace Quenary\Implementation;
 
 class Paths
 {

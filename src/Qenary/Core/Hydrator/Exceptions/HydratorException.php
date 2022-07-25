@@ -2,8 +2,8 @@
 
 declare(strict_types=1);
 
-namespace Qenary\Core\Hydrator\Exceptions;
+namespace Quenary\Core\Hydrator\Exceptions;
 
-use Qenary\Core\Exceptions\QuenaryException;
+use Quenary\Core\Exceptions\QuenaryException;
 
 class HydratorException extends QuenaryException{}

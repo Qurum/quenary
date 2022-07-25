@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Qenary\Tests\Dispatcher;
+namespace Quenary\Tests\Dispatcher;
 
-use Qenary\Attributes\EventType;
+use Quenary\Attributes\EventType;
 
 enum EventTypes: string implements EventType
 {

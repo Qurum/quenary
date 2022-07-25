@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Qenary\Implementation\HandlerFactory;
+namespace Quenary\Implementation\HandlerFactory;
 
-use Qenary\Attributes\Handler\CommandHandler;
-use Qenary\Core\HandlerFactory as HandlerFactoryInterface;
-use Qenary\Core\HandlerFactory\Exceptions\CommandNotSetException;
-use Qenary\Core\MessageHandlerDTO;
+use Quenary\Attributes\Handler\CommandHandler;
+use Quenary\Core\HandlerFactory as HandlerFactoryInterface;
+use Quenary\Core\HandlerFactory\Exceptions\CommandNotSetException;
+use Quenary\Core\MessageHandlerDTO;
 use ReflectionAttribute;
 use ReflectionClass;
 use ReflectionMethod;

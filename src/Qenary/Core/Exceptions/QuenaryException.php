@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Qenary\Core\Exceptions;
+namespace Quenary\Core\Exceptions;
 
 class QuenaryException extends \RuntimeException
 {

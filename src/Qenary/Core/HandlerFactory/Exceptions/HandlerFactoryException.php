@@ -2,8 +2,8 @@
 
 declare(strict_types=1);
 
-namespace Qenary\Core\HandlerFactory\Exceptions;
+namespace Quenary\Core\HandlerFactory\Exceptions;
 
-use Qenary\Core\Exceptions\QuenaryException;
+use Quenary\Core\Exceptions\QuenaryException;
 
 class HandlerFactoryException extends QuenaryException{}

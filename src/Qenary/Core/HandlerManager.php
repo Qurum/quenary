@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Qenary\Core;
+namespace Quenary\Core;
 
 interface HandlerManager
 {

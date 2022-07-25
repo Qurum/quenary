@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Qenary\Implementation\ClassManager;
+namespace Quenary\Implementation\ClassManager;
 
 class Composer
 {

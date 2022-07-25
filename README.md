@@ -54,7 +54,7 @@ $this->dispatcher->dispatch(
 );
 ```
 
-Диспетчер ```$this->dispatcher``` - объект класса ```Qenary\Core\Dispatcher```. 
+Диспетчер ```$this->dispatcher``` - объект класса ```Quenary\Core\Dispatcher```. 
 Он внедряется автоматически по месту требования контейнером, например через конструктор.
 
 Первый аргумент метода ```dispatch``` - значение из enum'а с типами команд.

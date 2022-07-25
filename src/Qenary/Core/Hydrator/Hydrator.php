@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Qenary\Core\Hydrator;
+namespace Quenary\Core\Hydrator;
 
 interface Hydrator
 {
