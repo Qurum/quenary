@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Quenary\Implementation;
 
-class Paths
+abstract class Paths
 {
-    public const YAML_CONFIG = '';
+    abstract public static function YAML_CONFIG();
 }

@@ -13,7 +13,7 @@ class ConfigManager implements \Quenary\Core\ConfigManager
 
     public function load(): array
     {
-        return Spyc::YAMLLoad($this->paths::YAML_CONFIG);
+        return Spyc::YAMLLoad($this->paths::YAML_CONFIG());
     }
 
     public function save(array $data): void
@@ -28,6 +28,6 @@ class ConfigManager implements \Quenary\Core\ConfigManager
             no_opening_dashes: true,
         );
 
-        file_put_contents($this->paths::YAML_CONFIG, $header . $output);
+        file_put_contents($this->paths::YAML_CONFIG(), $header . $output);
     }
 }

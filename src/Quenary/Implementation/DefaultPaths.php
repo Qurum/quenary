@@ -6,5 +6,8 @@ namespace Quenary\Implementation;
 
 class DefaultPaths extends Paths
 {
-    public const YAML_CONFIG = './tmp/eb1bf189-11d7-48ec-94ea-2cf07a36e782.eventbus.yaml';
+    public static function YAML_CONFIG(): string
+    {
+        return getenv('QUENARY_PATH_TO_YAML_CLASSMAP');
+    }
 }
