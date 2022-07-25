@@ -7,7 +7,7 @@ namespace Qenary\Implementation\ClassManager;
 class Composer
 {
     private const COMMAND          = 'composer dump-autoload --optimize --no-dev';
-    private const PATH_TO_CLASSMAP = 'vendor/composer/autoload_classmap.php';
+    private const PATH_TO_CLASSMAP = __DIR__ .'/vendor/composer/autoload_classmap.php';
 
     public function execute()
     {

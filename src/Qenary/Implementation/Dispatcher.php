@@ -52,7 +52,6 @@ class Dispatcher extends AbstractDispatcher
             }
         }
 
-
         return $result;
     }
 }
