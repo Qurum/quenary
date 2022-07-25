@@ -25,7 +25,7 @@ use Quenary\Implementation\ProxyHandlerManager;
 
 class Quenary
 {
-    private static ?Dispatcher $dispatcher;
+    private static ?Dispatcher $dispatcher = null;
     private static ?Container  $container = null;
 
     public static function dispatcher(): Dispatcher
