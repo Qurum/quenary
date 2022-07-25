@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace Qenary\Implementation\Hydrator;
+namespace Qurum\Quenary\Implementation\Hydrator;
 
 use JsonException;
-use Qenary\Core\Hydrator\Hydrator as HydratorInterface;
-use Qenary\Core\Hydrator\Exceptions\CannotInstantiate;
-use Qenary\Core\Hydrator\Exceptions\ClassDoesNotExist;
-use Qenary\Core\Hydrator\Exceptions\NoProperty;
-use Qenary\Core\Hydrator\Exceptions\NotAllowNull;
-use Qenary\Core\Hydrator\Exceptions\WrongJson;
-use Qenary\Core\Hydrator\Exceptions\WrongType;
+use Qurum\Quenary\Core\Hydrator\Hydrator as HydratorInterface;
+use Qurum\Quenary\Core\Hydrator\Exceptions\CannotInstantiate;
+use Qurum\Quenary\Core\Hydrator\Exceptions\ClassDoesNotExist;
+use Qurum\Quenary\Core\Hydrator\Exceptions\NoProperty;
+use Qurum\Quenary\Core\Hydrator\Exceptions\NotAllowNull;
+use Qurum\Quenary\Core\Hydrator\Exceptions\WrongJson;
+use Qurum\Quenary\Core\Hydrator\Exceptions\WrongType;
 use ReflectionClass;
 use ReflectionException;
 use ReflectionProperty;

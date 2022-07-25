@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Qenary\Implementation\ClassManager;
+namespace Qurum\Quenary\Implementation\ClassManager;
 
 use Generator;
-use Qenary\Core\ClassManager as ClassManagerInterface;
+use Qurum\Quenary\Core\ClassManager as ClassManagerInterface;
 use ReflectionClass;
 
 class ClassManager implements ClassManagerInterface

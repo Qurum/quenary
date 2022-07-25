@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Qenary\Implementation\Hydrator;
+namespace Qurum\Quenary\Implementation\Hydrator;
 
 enum ErrorMessages: string
 {

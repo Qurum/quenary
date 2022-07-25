@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Qenary\Core;
+namespace Qurum\Quenary\Core;
 
 use Psr\Container\ContainerInterface;
-use Qenary\Core\Hydrator\Hydrator;
+use Qurum\Quenary\Core\Hydrator\Hydrator;
 
 abstract class Dispatcher
 {

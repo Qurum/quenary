@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Qenary\Implementation;
+namespace Qurum\Quenary\Implementation;
 
-use Qenary\Core\Autoloader as AbstractAutoloader;
-use Qenary\Core\HandlerManager;
-use Qenary\Core\MessageHandlerDTO;
+use Qurum\Quenary\Core\Autoloader as AbstractAutoloader;
+use Qurum\Quenary\Core\HandlerManager;
+use Qurum\Quenary\Core\MessageHandlerDTO;
 
 class Autoloader extends AbstractAutoloader
 {

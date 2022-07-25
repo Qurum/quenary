@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Qenary\Core;
+namespace Qurum\Quenary\Core;
 
-use Qenary\Core\HandlerFactory\Exceptions\CommandNotSetException;
+use Qurum\Quenary\Core\HandlerFactory\Exceptions\CommandNotSetException;
 use ReflectionClass;
 
 interface HandlerFactory

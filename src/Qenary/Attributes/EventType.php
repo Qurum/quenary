@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Qenary\Attributes;
+namespace Qurum\Quenary\Attributes;
 
 /**
  * @property-read string $value

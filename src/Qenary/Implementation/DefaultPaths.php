@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Qenary\Implementation;
+namespace Qurum\Quenary\Implementation;
 
 class DefaultPaths extends Paths
 {

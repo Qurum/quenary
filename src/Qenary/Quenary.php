@@ -2,26 +2,26 @@
 
 declare(strict_types=1);
 
-namespace Quenary;
+namespace Qurum\Quenary;
 
 use DI\Container;
 use DI\ContainerBuilder;
-use Qenary\Core\Autoloader;
-use Qenary\Core\ClassManager;
-use Qenary\Core\ConfigManager;
-use Qenary\Core\Dispatcher;
-use Qenary\Core\HandlerFactory;
-use Qenary\Core\HandlerManager;
-use Qenary\Core\Hydrator\Hydrator;
-use Qenary\Implementation\Autoloader as AutoloaderImplementation;
-use Qenary\Implementation\ClassManager\ClassManager as ClassManagerImplementation;
-use Qenary\Implementation\ConfigManager as ConfigManagerImplementation;
-use Qenary\Implementation\DefaultPaths;
-use Qenary\Implementation\Dispatcher as DispatcherImplementation;
-use Qenary\Implementation\HandlerFactory\HandlerFactory as HandlerFactoryImplementation;
-use Qenary\Implementation\Hydrator\Hydrator as HydratorImplementation;
-use Qenary\Implementation\Paths;
-use Qenary\Implementation\ProxyHandlerManager;
+use Qurum\Quenary\Core\Autoloader;
+use Qurum\Quenary\Core\ClassManager;
+use Qurum\Quenary\Core\ConfigManager;
+use Qurum\Quenary\Core\Dispatcher;
+use Qurum\Quenary\Core\HandlerFactory;
+use Qurum\Quenary\Core\HandlerManager;
+use Qurum\Quenary\Core\Hydrator\Hydrator;
+use Qurum\Quenary\Implementation\Autoloader as AutoloaderImplementation;
+use Qurum\Quenary\Implementation\ClassManager\ClassManager as ClassManagerImplementation;
+use Qurum\Quenary\Implementation\ConfigManager as ConfigManagerImplementation;
+use Qurum\Quenary\Implementation\DefaultPaths;
+use Qurum\Quenary\Implementation\Dispatcher as DispatcherImplementation;
+use Qurum\Quenary\Implementation\HandlerFactory\HandlerFactory as HandlerFactoryImplementation;
+use Qurum\Quenary\Implementation\Hydrator\Hydrator as HydratorImplementation;
+use Qurum\Quenary\Implementation\Paths;
+use Qurum\Quenary\Implementation\ProxyHandlerManager;
 
 class Quenary
 {

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Qenary\Attributes\Handler;
+namespace Qurum\Quenary\Attributes\Handler;
 
 use Attribute;
 

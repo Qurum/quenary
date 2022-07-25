@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Qenary\Core;
+namespace Qurum\Quenary\Core;
 
 use Generator;
 use ReflectionClass;

@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Qenary\Implementation;
+namespace Qurum\Quenary\Implementation;
 
-use Qenary\Core\Autoloader;
-use Qenary\Core\Dispatcher as AbstractDispatcher;
-use Qenary\Core\MessageHandlerDTO;
+use Qurum\Quenary\Core\Autoloader;
+use Qurum\Quenary\Core\Dispatcher as AbstractDispatcher;
+use Qurum\Quenary\Core\MessageHandlerDTO;
 
 class Dispatcher extends AbstractDispatcher
 {
