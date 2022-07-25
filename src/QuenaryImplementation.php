@@ -84,7 +84,7 @@ class QuenaryImplementation implements Quenary, QuenaryAutoloader
                 HandlerFactory::class => \DI\autowire(HandlerFactoryImplementation::class),
                 Hydrator::class       => \DI\autowire(HydratorImplementation::class),
                 Dispatcher::class     => \DI\autowire(DispatcherImplementation::class)
-                    ->constructorParameter('container', \DI\factory('Quenary\QuenaryImplementation::container')),
+                    ->constructorParameter('container', \DI\factory([QuenaryImplementation::class, 'container'])),
                 Autoloader::class     => \DI\autowire(AutoloaderImplementation::class),
             ]
         );
