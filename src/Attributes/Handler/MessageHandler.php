@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Qurum\Quenary\Attributes\Handler;
+namespace Quenary\Attributes\Handler;
 
 use Attribute;
-use Qurum\Quenary\Attributes\EventType;
+use Quenary\Attributes\EventType;
 
 #[Attribute(Attribute::IS_REPEATABLE | Attribute::TARGET_METHOD)]
 abstract class MessageHandler

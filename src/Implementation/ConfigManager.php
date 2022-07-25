@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Qurum\Quenary\Implementation;
+namespace Quenary\Implementation;
 
 use DateTimeImmutable;
-use Spyc;
+use \Spyc;
 
-class ConfigManager implements \Qurum\Quenary\Core\ConfigManager
+class ConfigManager implements \Quenary\Core\ConfigManager
 {
     public function __construct(public readonly Paths $paths) {}
 
