@@ -25,6 +25,7 @@ use Quenary\Implementation\ProxyHandlerManager;
 
 class Quenary
 {
+    private static ?Autoloader $autoloader = null;
     private static ?Dispatcher $dispatcher = null;
     private static ?Container  $container = null;
 
@@ -39,6 +40,19 @@ class Quenary
         }
 
         return self::$dispatcher;
+    }
+
+    public static function autoloader(): Autoloader
+    {
+        if (is_null(self::$autoloader)) {
+            self::buildContainer();
+        }
+
+        if (is_null(self::$autoloader)) {
+            self::$autoloader = self::$container->get(Autoloader::class);
+        }
+
+        return self::$autoloader;
     }
 
     private static function buildContainer()

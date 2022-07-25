@@ -19,7 +19,7 @@ class Dispatcher extends AbstractDispatcher
         $result   = [];
         $loadedHandlers = $autoloader->load();
 
-        foreach ($loadedHandlers['command'] as $type => $handlers) {
+        foreach ($loadedHandlers['command']??[] as $type => $handlers) {
             foreach ($handlers as $handler) {
                 $result[$type][] = new MessageHandlerDTO(
                     type   : $type,
@@ -30,7 +30,7 @@ class Dispatcher extends AbstractDispatcher
             }
         }
 
-        foreach ($loadedHandlers['event'] as $type => $handlers) {
+        foreach ($loadedHandlers['event']??[] as $type => $handlers) {
             foreach ($handlers as $handler) {
                 $result[$type][] = new MessageHandlerDTO(
                     type   : $type,
@@ -41,7 +41,7 @@ class Dispatcher extends AbstractDispatcher
             }
         }
 
-        foreach ($loadedHandlers['query'] as $type => $handlers) {
+        foreach ($loadedHandlers['query']??[] as $type => $handlers) {
             foreach ($handlers as $handler) {
                 $result[$type][] = new MessageHandlerDTO(
                     type   : $type,
