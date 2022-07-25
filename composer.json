@@ -1,4 +1,6 @@
 {
+  "name": "qurum/quenary",
+  "version": "0.2.0",
   "require": {
     "php": ">=8.1",
     "mustangostang/spyc": "^0.6.3",
