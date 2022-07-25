@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Qenary\Tests\Dispatcher;
+namespace Quenary\Tests\Dispatcher;
 
-use Qenary\Attributes\Handler\CommandHandler;
-use Qenary\Attributes\Handler\EventHandler;
-use Qenary\Attributes\Handler\QueryHandler;
-use Qenary\Tests\Dispatcher\EventTypes;
+use Quenary\Attributes\Handler\CommandHandler;
+use Quenary\Attributes\Handler\EventHandler;
+use Quenary\Attributes\Handler\QueryHandler;
+use Quenary\Tests\Dispatcher\EventTypes;
 
 interface SomeInterface
 {

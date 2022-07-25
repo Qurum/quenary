@@ -2,6 +2,6 @@
 
 declare(strict_types=1);
 
-namespace Qenary\Tests\HandlerManager;
+namespace Quenary\Tests\HandlerManager;
 
 class DataObjectStub {}

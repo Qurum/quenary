@@ -8,7 +8,7 @@ use App\Domain\ArticleEventTypes;
 use App\Domain\Services\NewArticleEvent;
 use App\Domain\Services\NotifierService;
 use Monolog\Logger;
-use Qenary\Attributes\Handler\EventHandler;
+use Quenary\Attributes\Handler\EventHandler;
 
 class NotifierServiceImplementation implements NotifierService
 {

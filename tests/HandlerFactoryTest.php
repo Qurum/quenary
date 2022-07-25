@@ -2,19 +2,19 @@
 
 declare(strict_types=1);
 
-namespace Qenary\Tests;
+namespace Quenary\Tests;
 
 use PHPUnit\Framework\TestCase;
-use Qenary\Attributes\Handler\CommandHandler;
-use Qenary\Attributes\Handler\EventHandler;
-use Qenary\Attributes\Handler\QueryHandler;
-use Qenary\Core\HandlerFactory;
-use Qenary\Core\HandlerFactory\Exceptions\CommandNotSetException;
-use Qenary\Core\MessageHandlerDTO;
-use Qenary\Tests\HandlerFactory\EventTypes;
-use Qenary\Tests\HandlerFactory\SomeInterface;
-use Qenary\Tests\HandlerFactory\SomeInterfaceForException;
-use Qenary\Tests\HandlerFactory\ValidMessage;
+use Quenary\Attributes\Handler\CommandHandler;
+use Quenary\Attributes\Handler\EventHandler;
+use Quenary\Attributes\Handler\QueryHandler;
+use Quenary\Core\HandlerFactory;
+use Quenary\Core\HandlerFactory\Exceptions\CommandNotSetException;
+use Quenary\Core\MessageHandlerDTO;
+use Quenary\Tests\HandlerFactory\EventTypes;
+use Quenary\Tests\HandlerFactory\SomeInterface;
+use Quenary\Tests\HandlerFactory\SomeInterfaceForException;
+use Quenary\Tests\HandlerFactory\ValidMessage;
 use ReflectionClass;
 
 class HandlerFactoryTest extends TestCase

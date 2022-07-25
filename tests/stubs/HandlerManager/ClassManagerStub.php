@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Qenary\Tests\HandlerManager;
+namespace Quenary\Tests\HandlerManager;
 
 use Generator;
-use Qenary\Core\ClassManager;
+use Quenary\Core\ClassManager;
 use ReflectionClass;
 
 class ClassManagerStub implements ClassManager

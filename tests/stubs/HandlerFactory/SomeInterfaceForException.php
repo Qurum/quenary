@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Qenary\Tests\HandlerFactory;
+namespace Quenary\Tests\HandlerFactory;
 
-use Qenary\Attributes\Handler\EventHandler;
+use Quenary\Attributes\Handler\EventHandler;
 
 interface SomeInterfaceForException
 {

@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Qenary\Tests\Dispatcher;
+namespace Quenary\Tests\Dispatcher;
 
-use Qenary\Core\Autoloader;
+use Quenary\Core\Autoloader;
 
 class AutoloaderStub extends Autoloader
 {

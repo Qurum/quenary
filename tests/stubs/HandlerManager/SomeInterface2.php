@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Qenary\Tests\HandlerManager;
+namespace Quenary\Tests\HandlerManager;
 
-use Qenary\Attributes\Handler\CommandHandler;
-use Qenary\Attributes\Handler\QueryHandler;
-use Qenary\Attributes\Handler\EventHandler;
+use Quenary\Attributes\Handler\CommandHandler;
+use Quenary\Attributes\Handler\QueryHandler;
+use Quenary\Attributes\Handler\EventHandler;
 
 interface SomeInterface2
 {
