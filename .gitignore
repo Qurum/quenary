@@ -1,8 +1,0 @@
-.idea
-
-vendor/
-tmp/
-src/vendor/
-src/tmp/
-src/composer.lock
-composer.lock
