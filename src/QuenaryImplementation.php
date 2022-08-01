@@ -6,7 +6,7 @@ namespace Quenary;
 
 use DI\Container;
 use DI\ContainerBuilder;
-use http\Exception\RuntimeException;
+use RuntimeException;
 use Quenary\Core\Autoloader;
 use Quenary\Core\ClassManager;
 use Quenary\Core\ConfigManager;
@@ -17,11 +17,9 @@ use Quenary\Core\Hydrator\Hydrator;
 use Quenary\Implementation\Autoloader as AutoloaderImplementation;
 use Quenary\Implementation\ClassManager\ClassManager as ClassManagerImplementation;
 use Quenary\Implementation\ConfigManager as ConfigManagerImplementation;
-use Quenary\Implementation\DefaultPaths;
 use Quenary\Implementation\Dispatcher as DispatcherImplementation;
 use Quenary\Implementation\HandlerFactory\HandlerFactory as HandlerFactoryImplementation;
 use Quenary\Implementation\Hydrator\Hydrator as HydratorImplementation;
-use Quenary\Implementation\Paths;
 use Quenary\Implementation\ProxyHandlerManager;
 
 class QuenaryImplementation implements Quenary, QuenaryAutoloader
@@ -76,7 +74,6 @@ class QuenaryImplementation implements Quenary, QuenaryAutoloader
         $builder = new ContainerBuilder();
         $builder->addDefinitions(
             [
-                Paths::class          => \DI\autowire(DefaultPaths::class),
                 ClassManager::class   => \DI\autowire(ClassManagerImplementation::class)
                     ->constructorParameter('namespace', \DI\env('QUENARY_NAMESPACE')),
                 ConfigManager::class  => \DI\autowire(ConfigManagerImplementation::class),
