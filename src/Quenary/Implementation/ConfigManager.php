@@ -2,18 +2,18 @@
 
 declare(strict_types=1);
 
-namespace Quenary\Implementation;
+namespace Qenary\Implementation;
 
 use DateTimeImmutable;
 use Spyc;
 
-class ConfigManager implements \Quenary\Core\ConfigManager
+class ConfigManager implements \Qenary\Core\ConfigManager
 {
     public function __construct(public readonly Paths $paths) {}
 
     public function load(): array
     {
-        return Spyc::YAMLLoad($this->paths::YAML_CONFIG());
+        return Spyc::YAMLLoad($this->paths->PATH_TO_YAML_CONFIG);
     }
 
     public function save(array $data): void
@@ -28,6 +28,6 @@ class ConfigManager implements \Quenary\Core\ConfigManager
             no_opening_dashes: true,
         );
 
-        file_put_contents($this->paths::YAML_CONFIG(), $header . $output);
+        file_put_contents($this->paths->PATH_TO_YAML_CONFIG, $header . $output);
     }
 }
