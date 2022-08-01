@@ -6,5 +6,14 @@ namespace Qenary\Implementation;
 
 class Paths
 {
-    public const YAML_CONFIG = '';
+    private const ENV_PATH_TO_YAML_CONFIG          = 'QUENARY_PATH_TO_YAML_CONFIG';
+
+    public readonly string $PATH_TO_YAML_CONFIG;
+
+    public function __construct()
+    {
+        $this->PATH_TO_YAML_CONFIG = getenv(self::ENV_PATH_TO_YAML_CONFIG) === false
+            ? './tmp/eb1bf189-11d7-48ec-94ea-2cf07a36e782.eventbus.yaml'
+            : getenv(self::ENV_PATH_TO_YAML_CONFIG);
+    }
 }
