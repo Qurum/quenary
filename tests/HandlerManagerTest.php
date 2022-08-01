@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace Qenary\Tests;
+namespace Quenary\Tests;
 
 use PHPUnit\Framework\TestCase;
-use Qenary\Core\HandlerManager;
-use Qenary\Core\MessageHandlerDTO;
-use Qenary\Tests\HandlerManager\DataObjectStub;
-use Qenary\Tests\HandlerManager\EventTypes;
-use Qenary\Tests\HandlerManager\SomeInterface1;
-use Qenary\Tests\HandlerManager\SomeInterface2;
-use Qenary\Tests\HandlerManager\SomeInterface3;
+use Quenary\Core\HandlerManager;
+use Quenary\Core\MessageHandlerDTO;
+use Quenary\Tests\HandlerManager\DataObjectStub;
+use Quenary\Tests\HandlerManager\EventTypes;
+use Quenary\Tests\HandlerManager\SomeInterface1;
+use Quenary\Tests\HandlerManager\SomeInterface2;
+use Quenary\Tests\HandlerManager\SomeInterface3;
 
 class HandlerManagerTest extends TestCase
 {

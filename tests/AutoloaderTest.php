@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Qenary\Tests;
+namespace Quenary\Tests;
 
 use PHPUnit\Framework\TestCase;
-use Qenary\Core\Autoloader;
-use Qenary\Core\ConfigManager;
-use Qenary\Tests\Autoloader\ConfigManagerStub;
+use Quenary\Core\Autoloader;
+use Quenary\Core\ConfigManager;
+use Quenary\Tests\Autoloader\ConfigManagerStub;
 
 class AutoloaderTest extends TestCase
 {

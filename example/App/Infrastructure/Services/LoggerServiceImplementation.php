@@ -9,7 +9,7 @@ use App\Domain\Services\LoggerService;
 use App\Domain\Services\NewArticleEvent;
 use App\Domain\Services\NotifierService;
 use Monolog\Logger;
-use Qenary\Attributes\Handler\EventHandler;
+use Quenary\Attributes\Handler\EventHandler;
 
 class LoggerServiceImplementation implements LoggerService
 {

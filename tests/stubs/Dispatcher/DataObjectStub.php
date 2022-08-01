@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Qenary\Tests\Dispatcher;
+namespace Quenary\Tests\Dispatcher;
 
 class DataObjectStub
 {

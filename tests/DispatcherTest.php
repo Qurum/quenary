@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Qenary\Tests;
+namespace Quenary\Tests;
 
 use PHPUnit\Framework\TestCase;
-use Qenary\Core\Dispatcher;
-use Qenary\Tests\Dispatcher\DataObjectStub;
-use Qenary\Tests\Dispatcher\EventTypes;
-use Qenary\Tests\Dispatcher\SomeInterface;
-use Qenary\Tests\Dispatcher\SomeService;
+use Quenary\Core\Dispatcher;
+use Quenary\Tests\Dispatcher\DataObjectStub;
+use Quenary\Tests\Dispatcher\EventTypes;
+use Quenary\Tests\Dispatcher\SomeInterface;
+use Quenary\Tests\Dispatcher\SomeService;
 
 class DispatcherTest extends TestCase
 {

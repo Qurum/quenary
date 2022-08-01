@@ -2,24 +2,24 @@
 
 declare(strict_types=1);
 
-use Qenary\Implementation\Autoloader as AutoloaderImplementation;
-use Qenary\Implementation\ClassManager\ClassManager as ClassManagerImplementation;
-use Qenary\Implementation\Dispatcher as DispatcherImplementation;
-use Qenary\Implementation\HandlerFactory\HandlerFactory as HandlerFactoryImplementation;
-use Qenary\Implementation\Hydrator\Hydrator as HydratorImplementation;
-use Qenary\Implementation\ProxyHandlerManager;
-use Qenary\Tests\Autoloader\ConfigManagerStub;
-use Qenary\Tests\Autoloader\HandlerManagerStub;
-use Qenary\Tests\ClassManager\ComposerMock;
-use Qenary\Tests\Dispatcher\AutoloaderStub;
-use Qenary\Tests\HandlerManager\ClassManagerStub;
+use Quenary\Implementation\Autoloader as AutoloaderImplementation;
+use Quenary\Implementation\ClassManager\ClassManager as ClassManagerImplementation;
+use Quenary\Implementation\Dispatcher as DispatcherImplementation;
+use Quenary\Implementation\HandlerFactory\HandlerFactory as HandlerFactoryImplementation;
+use Quenary\Implementation\Hydrator\Hydrator as HydratorImplementation;
+use Quenary\Implementation\ProxyHandlerManager;
+use Quenary\Tests\Autoloader\ConfigManagerStub;
+use Quenary\Tests\Autoloader\HandlerManagerStub;
+use Quenary\Tests\ClassManager\ComposerMock;
+use Quenary\Tests\Dispatcher\AutoloaderStub;
+use Quenary\Tests\HandlerManager\ClassManagerStub;
 
 return [
     'Tests_Hydrator'       => DI\autowire(HydratorImplementation::class),
 
     'Tests_ClassManager'   => DI\autowire(ClassManagerImplementation::class)
         ->constructorParameter('composer', DI\autowire(ComposerMock::class))
-        ->constructorParameter('namespace', 'Qenary'),
+        ->constructorParameter('namespace', 'Quenary'),
 
     'Tests_HandlerFactory' => DI\autowire(HandlerFactoryImplementation::class),
 

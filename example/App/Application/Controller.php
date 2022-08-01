@@ -6,7 +6,7 @@ namespace App\Application;
 
 use App\Domain\ArticleEventTypes;
 use App\Domain\Services\PublishAnArticleCommand;
-use Qenary\Core\Dispatcher;
+use Quenary\Core\Dispatcher;
 
 class Controller
 {

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use Qenary\Core\Autoloader;
+use Quenary\Core\Autoloader;
 
 require 'vendor/autoload.php';
 

@@ -6,8 +6,8 @@ use App\Domain\ArticleEventTypes;
 use App\Domain\Services\ArticleService;
 use App\Domain\Services\NewArticleEvent;
 use App\Domain\Services\PublishAnArticleCommand;
-use Qenary\Attributes\Handler\CommandHandler;
-use Qenary\Core\Dispatcher;
+use Quenary\Attributes\Handler\CommandHandler;
+use Quenary\Core\Dispatcher;
 
 class ArticleServiceImplementation implements ArticleService
 {

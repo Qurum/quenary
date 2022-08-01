@@ -5,12 +5,12 @@ declare(strict_types=1);
 namespace Quenary\Tests;
 
 use PHPUnit\Framework\TestCase;
-use Qenary\Core\Hydrator\Exceptions\ClassDoesNotExist;
-use Qenary\Core\Hydrator\Exceptions\NoProperty;
-use Qenary\Core\Hydrator\Exceptions\NotAllowNull;
-use Qenary\Core\Hydrator\Exceptions\WrongJson;
-use Qenary\Implementation\Hydrator\Hydrator;
-use Qenary\Tests\DataObject\DataObjectFactory;
+use Quenary\Core\Hydrator\Exceptions\ClassDoesNotExist;
+use Quenary\Core\Hydrator\Exceptions\NoProperty;
+use Quenary\Core\Hydrator\Exceptions\NotAllowNull;
+use Quenary\Core\Hydrator\Exceptions\WrongJson;
+use Quenary\Implementation\Hydrator\Hydrator;
+use Quenary\Tests\DataObject\DataObjectFactory;
 
 class HydratorTest extends TestCase
 {

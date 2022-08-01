@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Qenary\Tests\ClassManager;
+namespace Quenary\Tests\ClassManager;
 
-use Qenary\Implementation\ClassManager\Composer;
+use Quenary\Implementation\ClassManager\Composer;
 
 include_once "stubsForClasses.php";
 

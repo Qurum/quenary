@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Qenary\Tests\Autoloader;
+namespace Quenary\Tests\Autoloader;
 
-use Qenary\Core\HandlerManager;
-use Qenary\Core\MessageHandlerDTO;
+use Quenary\Core\HandlerManager;
+use Quenary\Core\MessageHandlerDTO;
 
 class HandlerManagerStub implements HandlerManager
 {

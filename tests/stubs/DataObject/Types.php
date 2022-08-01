@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Qenary\Tests\DataObject;
+namespace Quenary\Tests\DataObject;
 
 trait Types
 {
